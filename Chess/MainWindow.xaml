@@ -5,8 +5,110 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chess"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="817" Width="799" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Width="800" Height="800" x:Name="griddd" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
 
+        <Button Grid.Column="0" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="Rook">
+            <Image Width="81" Height="72" Source="/Rook.jpg">
+
+            </Image>
+        </Button>
+        <Button Background="#FFAD4602" Grid.Column="1" Grid.Row="0" Click="Button_Click" x:Name="Knight"></Button>
+        <Button Grid.Column="2" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="Bishop"></Button>
+        <Button Grid.Column="3" Grid.Row="0" Background="#FFAD4602" Click="Button_Click" x:Name="Queen"></Button>
+        <Button Grid.Column="4" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="King"></Button>
+        <Button Grid.Column="5" Grid.Row="0" Background="#FFAD4602" Click="Button_Click" x:Name="Pawn1"></Button>
+        <Button Grid.Column="6" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="Pawn2"></Button>
+        <Button Grid.Column="8" Grid.Row="0" Background="#FFAD4602" Click="Button_Click" x:Name="Pawn3">
+            <Image Width="81" Height="72" Source="/Rook.jpg">
+
+            </Image>
+        </Button>
+        <Button Grid.Column="0" Grid.Row="1" Background="#FFAD4602" Click="Button_Click" x:Name="Pawn4">
+
+        </Button>
+        <Button Grid.Column="1" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="2" Grid.Row="1" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="3" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="4" Grid.Row="1" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="5" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="6" Grid.Row="1" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="8" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="0" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="1" Grid.Row="2" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="2" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="3" Grid.Row="2" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="4" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="5" Grid.Row="2" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="6" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="8" Grid.Row="2" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="0" Grid.Row="3" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="1" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="2" Grid.Row="3" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="3" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="4" Grid.Row="3" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="5" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="6" Grid.Row="3" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="8" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="0" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="1" Grid.Row="4" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="2" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="3" Grid.Row="4" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="4" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="5" Grid.Row="4" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="6" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="8" Grid.Row="4" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="0" Grid.Row="5" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="1" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="2" Grid.Row="5" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="3" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="4" Grid.Row="5" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="5" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="6" Grid.Row="5" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="8" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="0" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="1" Grid.Row="6" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="2" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="3" Grid.Row="6" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="4" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="5" Grid.Row="6" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="6" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="8" Grid.Row="6" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="0" Grid.Row="7" Background="#FFAD4602" Click="Button_Click">
+            <Image Width="81" Height="72" Source="/Rook.jpg">
+
+            </Image>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="2" Grid.Row="7" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="3" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="4" Grid.Row="7" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="5" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click"></Button>
+        <Button Grid.Column="6" Grid.Row="7" Background="#FFAD4602" Click="Button_Click"></Button>
+        <Button Grid.Column="8" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click">
+            <Image Width="81" Height="72" Source="/Rook.jpg">
+
+            </Image>
+        </Button>
     </Grid>
 </Window>
