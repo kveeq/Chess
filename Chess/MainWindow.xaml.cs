@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,12 +19,13 @@ namespace Chess
 {
     public partial class MainWindow : Window
     {
-
+        // public ObservableCollection<ButtonViewModel> Buttons { get; set; } = new ObservableCollection<ButtonViewModel>();
         private string name;
         private int _column;
         private int _row;
         ChessFigures figures = null;
         bool state = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,10 +33,14 @@ namespace Chess
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // передвигать только картинку и имя кнопки которая нажата, еще сздать кнопку которая будет хранить предыдущую кнопку
 
             Button _btn = sender as Button;
-            if (_btn.Background == null) { }
+            //Buttons.Add(new ButtonViewModel("aaa"));
+            //Buttons.Add(new ButtonViewModel("bbb", 1, 1));
+            //Buttons.Add(new ButtonViewModel("ccc", 2));
             state = !state;
+
             _row = (int)_btn.GetValue(Grid.RowProperty) + 1;
             _column = (int)_btn.GetValue(Grid.ColumnProperty) + 1;
 
@@ -45,13 +51,22 @@ namespace Chess
             }
             else
             {
-                MessageBox.Show($"{figures.Move(_column, _row)} \n row {_row} column {_column}");
+                if (figures.Move(_column, _row))
+                {
+                    Grid.SetRow(white_Rook, _row - 1);
+                    Grid.SetColumn(white_Rook, _column - 1);
+                }
+                else
+                {
+                    MessageBox.Show($"{figures.Move(_column, _row)} \n row {_row} column {_column}");
+
+                }
             }
         }
 
         private void Fabrika(string _name, int x, int y)
         {
-            switch (_name)
+            switch (_name.Replace("White_", ""))
             {
                 case "King":
                     figures = new King(x, y);
@@ -73,6 +88,23 @@ namespace Chess
                     figures = new Pawn(x, y);
                     break;
             }
+        }
+    }
+
+    public class ButtonViewModel
+    {
+        public string Content { get; set; }
+        public int Row { get; set; }
+        public int Column { get; set; }
+
+        public ICommand Command { get; set; }
+
+        public ButtonViewModel(string content, int row = 0, int column = 0, ICommand command = null)
+        {
+            Content = content;
+            Row = row;
+            Column = column;
+            Command = command;
         }
     }
 }
