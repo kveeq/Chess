@@ -31,15 +31,17 @@ namespace Chess
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            state = !state;
+
             Button _btn = sender as Button;
+            if (_btn.Background == null) { }
+            state = !state;
             _row = (int)_btn.GetValue(Grid.RowProperty) + 1;
             _column = (int)_btn.GetValue(Grid.ColumnProperty) + 1;
 
             if (state)
             {
                 name = _btn.Name;
-                Hui(name, _column, _row);
+                Fabrika(name, _column, _row);
             }
             else
             {
@@ -47,7 +49,7 @@ namespace Chess
             }
         }
 
-        private void Hui(string _name, int x, int y)
+        private void Fabrika(string _name, int x, int y)
         {
             switch (_name)
             {

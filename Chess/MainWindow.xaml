@@ -29,7 +29,7 @@
         </Grid.RowDefinitions>
 
         <Button Grid.Column="0" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="Rook">
-            <Image Width="81" Height="72" Source="/Rook.jpg">
+            <Image x:Name="btn" Width="81" Height="72" Source="/Rook.jpg">
 
             </Image>
         </Button>
