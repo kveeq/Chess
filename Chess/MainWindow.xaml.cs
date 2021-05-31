@@ -19,8 +19,8 @@ namespace Chess
 {
     public partial class MainWindow : Window
     {
-        // public ObservableCollection<ButtonViewModel> Buttons { get; set; } = new ObservableCollection<ButtonViewModel>();
         private string name;
+        private string name_prev;
         private int _column;
         private int _row;
         ChessFigures figures = null;
@@ -52,12 +52,10 @@ namespace Chess
             // передвигать только картинку и имя кнопки которая нажата, еще сздать кнопку которая будет хранить предыдущую кнопку
 
             Button _btn = sender as Button;
+            Button btn_prev = new Button();
             state = !state;
-
             _row = (int)_btn.GetValue(Grid.RowProperty);
             _column = (int)_btn.GetValue(Grid.ColumnProperty);
-
-
 
             if (state)
             {
@@ -68,9 +66,20 @@ namespace Chess
             {
                 if (figures.Move(_column, _row))
                 {
+                    //if(_btn.Name == "" || _btn.Name == null)
+                    //{
                     _btn.Name = name;
+                    //btn_prev.Name = name_prev;
+                    //btn_prev.Name = "";
+                    //btn_prev = _btn;
                     Grid.SetRow(take_element("Ic_" + name), _row);
                     Grid.SetColumn(take_element("Ic_" + name), _column);
+                    //}
+                    //else if(_btn.Name[_btn.Name.Length - 2] != btn_prev.Name[btn_prev.Name.Length - 2])
+                    //{
+                    //    var a = take_element("Ic_" + name_prev);
+                    //    a.Kind = new MaterialDesignThemes.Wpf.PackIconKind();
+                    //}
                 }
                 else
                 {
@@ -105,22 +114,16 @@ namespace Chess
                     break;
             }
         }
-    }
 
-    public class ButtonViewModel
-    {
-        public string Content { get; set; }
-        public int Row { get; set; }
-        public int Column { get; set; }
+        //bool CanEat;
 
-        public ICommand Command { get; set; }
+        //private void CheckEat (Button btn, Button btn_prev)
+        //{
+        //    if (btn.Name[btn.Name.Length-2] != btn.Name[btn.Name.Length - 2])
+        //    {
 
-        public ButtonViewModel(string content, int row = 0, int column = 0, ICommand command = null)
-        {
-            Content = content;
-            Row = row;
-            Column = column;
-            Command = command;
-        }
+        //    }
+
+        //}
     }
 }
