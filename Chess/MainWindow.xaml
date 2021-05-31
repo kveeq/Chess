@@ -29,80 +29,139 @@
             <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="0" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="Rook" Height="100" Width="100">
-            <materialDesign:PackIcon Kind="ChessRook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" />
-        </Button>
-        <Button Grid.Column="1" Grid.Row="0" Click="Button_Click" x:Name="Knight" Background="#FFAD4602" Width="100" Height="100"/>
-        <Button Grid.Column="2" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="Bishop" Width="100" Height="100"></Button>
-        <Button Grid.Column="3" Grid.Row="0" Background="#FFAD4602" Click="Button_Click" x:Name="Queen" Width="100" Height="100"></Button>
-        <Button Grid.Column="4" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="King" Width="100" Height="100"></Button>
-        <Button Grid.Column="5" Grid.Row="0" Background="#FFAD4602" Click="Button_Click" x:Name="Pawn1" Width="100" Height="100"></Button>
-        <Button Grid.Column="6" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="Pawn2" Width="100" Height="100"></Button>
-        <Button Grid.Column="8" Grid.Row="0" Background="#FFAD4602" Click="Button_Click" x:Name="Pawn3" Width="100" Height="100">
-            <materialDesign:PackIcon Kind="ChessRook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" />
-        </Button>
-        <Button Grid.Column="0" Grid.Row="1" Background="#FFAD4602" Click="Button_Click" x:Name="Pawn4" Width="100" Height="100">
+        <Button Grid.Column="0" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="1" Grid.Row="2" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="2" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="3" Grid.Row="2" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="4" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="5" Grid.Row="2" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="6" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="7" Grid.Row="2" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="0" Grid.Row="3" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="1" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="2" Grid.Row="3" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="3" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="4" Grid.Row="3" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="5" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="6" Grid.Row="3" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="7" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="0" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="1" Grid.Row="4" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="2" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="3" Grid.Row="4" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="4" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="5" Grid.Row="4" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="6" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="8" Grid.Row="4" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="0" Grid.Row="5" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="1" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="2" Grid.Row="5" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="3" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="4" Grid.Row="5" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="5" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="6" Grid.Row="5" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="7" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="1" Grid.Row="0" Click="Button_Click" x:Name="KnightB1" Background="#FFAD4602" Width="100" Height="100"/>
+        <Button Grid.Column="2" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="BishopB1" Width="100" Height="100"/>
+        <Button Grid.Column="3" Grid.Row="0" Background="#FFAD4602" Click="Button_Click" x:Name="QueenB0" Width="100" Height="100"/>
+        <Button Grid.Column="4" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="KingB0" Width="100" Height="100"/>
+        <Button Grid.Column="5" Grid.Row="0" Background="#FFAD4602" Click="Button_Click" x:Name="BishopB2" Width="100" Height="100"/>
+        <Button Grid.Column="6" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="KnightB2" Width="100" Height="100"/>
+        <Button Grid.Column="7" Grid.Row="0" Background="#FFAD4602" Click="Button_Click" x:Name="RookB2" Width="100" Height="100"/>
+        <Button Grid.Column="1" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click" x:Name="PawnB2" Width="100" Height="100"/>
+        <Button x:Name="PawnB8" Grid.Column="7" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="2" Grid.Row="1" Background="#FFAD4602" Click="Button_Click" x:Name="PawnB3" Width="100" Height="100"/>
+        <Button Grid.Column="3" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click" x:Name="PawnB4" Width="100" Height="100"/>
+        <Button Grid.Column="4" Grid.Row="1" Background="#FFAD4602" Click="Button_Click" x:Name="PawnB5" Width="100" Height="100"/>
+        <Button x:Name="PawnB6" Grid.Column="5" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="PawnB7" Grid.Column="6" Grid.Row="1" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="PawnW1" Grid.Column="0" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
 
-        </Button>
-        <Button Grid.Column="1" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="2" Grid.Row="1" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="3" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="4" Grid.Row="1" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="5" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="6" Grid.Row="1" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="8" Grid.Row="1" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="0" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="1" Grid.Row="2" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="2" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="3" Grid.Row="2" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="4" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="5" Grid.Row="2" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="6" Grid.Row="2" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="8" Grid.Row="2" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="0" Grid.Row="3" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="1" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="2" Grid.Row="3" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="3" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="4" Grid.Row="3" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="5" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="6" Grid.Row="3" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="8" Grid.Row="3" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="0" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="1" Grid.Row="4" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="2" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="3" Grid.Row="4" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="4" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="5" Grid.Row="4" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="6" Grid.Row="4" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="8" Grid.Row="4" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="0" Grid.Row="5" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="1" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="2" Grid.Row="5" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="3" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="4" Grid.Row="5" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="5" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="6" Grid.Row="5" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="8" Grid.Row="5" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="0" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="1" Grid.Row="6" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="2" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="3" Grid.Row="6" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="4" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="5" Grid.Row="6" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="6" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="8" Grid.Row="6" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <materialDesign:PackIcon Grid.Column="0" Grid.Row="7" x:Name="white_Rook" Kind="ChessRook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" />
 
-        <Button Grid.Column="0" Grid.Row="7" Background="{x:Null}" x:Name="White_Rook" Click="Button_Click" Width="100" Height="100"/>
+        <Button Grid.Column="0" Grid.Row="7" Background="#FFAD4602" x:Name="RookW1" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="RookW2" Grid.Column="7" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="KnightW2" Grid.Column="6" Grid.Row="7" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="BishopW2" Grid.Column="5" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="KingW0" Grid.Column="4" Grid.Row="7" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="QueenW0" Grid.Column="3" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="BishopW1" Grid.Column="2" Grid.Row="7" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="PawnW8" Grid.Column="7" Grid.Row="6" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="PawnW7" Grid.Column="6" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="PawnW6" Grid.Column="5" Grid.Row="6" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="PawnW5" Grid.Column="4" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="PawnW3" Grid.Column="2" Grid.Row="6" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"/>
+        <Button x:Name="PawnW4" Grid.Column="3" Grid.Row="6" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
 
-        <Button Grid.Column="1" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="2" Grid.Row="7" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="3" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="4" Grid.Row="7" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="5" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="6" Grid.Row="7" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"></Button>
-        <Button Grid.Column="8" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100">
-            <materialDesign:PackIcon Kind="ChessRook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" />
-        </Button>
+        <Button x:Name="PawnW2" Grid.Column="1" Grid.Row="6" Background="#FFAD4602" Click="Button_Click" Width="100" Height="100"/>
+
+        <Button x:Name="KnightW1" Grid.Column="1" Grid.Row="7" Background="#FFEBC18F" Click="Button_Click" Width="100" Height="100" Cursor="Hand"/>
+
+        <Button Grid.Column="0" Grid.Row="1" Background="#FFAD4602" Click="Button_Click" x:Name="PawnB1" Width="100" Height="100"/>
+
+        <Button Grid.Column="0" Grid.Row="0" Background="#FFEBC18F" Click="Button_Click" x:Name="RookB1" Height="100" Width="100"/>
+        <materialDesign:PackIcon x:Name="Ic_RookB1" Grid.Column="0" Grid.Row="0" Kind="ChessRook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" />
+
+        <materialDesign:PackIcon x:Name="Ic_KnightB1" Grid.Column="1" Grid.Row="0" Kind="ChessHorse" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" />
+        <materialDesign:PackIcon x:Name="Ic_RookW1" Kind="ChessRook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="0" Grid.Row="7" />
+
+        <materialDesign:PackIcon x:Name="Ic_BishopB1" Kind="ChessBishop" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="2" />
+
+        <materialDesign:PackIcon x:Name="Ic_QueenB0" Kind="ChessQueen" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="3" />
+
+        <materialDesign:PackIcon x:Name="Ic_KingB0" Kind="ChessKing" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="4" />
+
+        <materialDesign:PackIcon x:Name="Ic_BishopB2" Kind="ChessBishop" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="5" />
+
+        <materialDesign:PackIcon x:Name="Ic_KnightB2" Kind="ChessHorse" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="6" />
+
+        <materialDesign:PackIcon x:Name="Ic_RookB2" Kind="ChessRook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="8" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnB1" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="0" Grid.Row="1" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnB2" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="1" Grid.Row="1" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnB3" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="2" Grid.Row="1" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnB4" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="3" Grid.Row="1" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnB5" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="4" Grid.Row="1" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnB6" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="5" Grid.Row="1" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnB7" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="6" Grid.Row="1" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnB8" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DD000000" Grid.Column="7" Grid.Row="1" />
+
+
+        <materialDesign:PackIcon x:Name="Ic_PawnW1" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="0" Grid.Row="6" />
+        <materialDesign:PackIcon x:Name="Ic_PawnW2" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="1" Grid.Row="6" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnW3" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="2" Grid.Row="6" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnW4" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="3" Grid.Row="6" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnW5" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="4" Grid.Row="6" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnW6" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="5" Grid.Row="6" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnW7" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="6" Grid.Row="6" />
+
+        <materialDesign:PackIcon x:Name="Ic_PawnW8" Kind="ChessPawn" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="7" Grid.Row="6" />
+
+
+        <materialDesign:PackIcon x:Name="Ic_KnightW1" Kind="ChessHorse" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="1" Grid.Row="7" />
+
+        <materialDesign:PackIcon x:Name="Ic_BishopW1" Kind="ChessBishop" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="2" Grid.Row="7" />
+
+        <materialDesign:PackIcon x:Name="Ic_QueenW0" Kind="ChessQueen" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="3" Grid.Row="7" />
+
+        <materialDesign:PackIcon x:Name="Ic_KingW0" Kind="ChessKing" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="4" Grid.Row="7" />
+
+        <materialDesign:PackIcon x:Name="Ic_BishopW2" Kind="ChessBishop" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="5" Grid.Row="7" />
+
+        <materialDesign:PackIcon x:Name="Ic_KnightW2" Kind="ChessHorse" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Column="6" Grid.Row="7" />
+
+        <materialDesign:PackIcon x:Name="Ic_RookW2" Kind="ChessRook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="80" Foreground="#DDFFFFFF" Grid.Row="7" Grid.Column="7" />
+
     </Grid>
 </Window>

@@ -31,30 +31,46 @@ namespace Chess
             InitializeComponent();
         }
 
+        private MaterialDesignThemes.Wpf.PackIcon take_element(string name)
+        {
+            MaterialDesignThemes.Wpf.PackIcon[] icons = new MaterialDesignThemes.Wpf.PackIcon[32] { Ic_PawnB1, Ic_PawnB2, Ic_PawnB3, Ic_PawnB4, Ic_PawnB5, Ic_PawnB6, Ic_PawnB7, Ic_PawnB8, Ic_RookB1, Ic_RookB2, Ic_KnightB1, Ic_KnightB2, Ic_BishopB1, Ic_BishopB2, Ic_QueenB0, Ic_KingB0, Ic_PawnW1, Ic_PawnW2, Ic_PawnW3, Ic_PawnW4, Ic_PawnW5, Ic_PawnW6, Ic_PawnW7, Ic_PawnW8, Ic_RookW1, Ic_RookW2, Ic_KnightW1, Ic_KnightW2, Ic_BishopW1, Ic_BishopW2, Ic_QueenW0, Ic_KingW0 };
+            MaterialDesignThemes.Wpf.PackIcon name_icon = Ic_PawnB1;
+            foreach (var item in icons)
+            {
+                if (item.Name.ToString() == name)
+                {
+                    name_icon = item;
+                    break;
+                }
+
+            }
+            return name_icon;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // передвигать только картинку и имя кнопки которая нажата, еще сздать кнопку которая будет хранить предыдущую кнопку
 
             Button _btn = sender as Button;
-            //Buttons.Add(new ButtonViewModel("aaa"));
-            //Buttons.Add(new ButtonViewModel("bbb", 1, 1));
-            //Buttons.Add(new ButtonViewModel("ccc", 2));
             state = !state;
 
-            _row = (int)_btn.GetValue(Grid.RowProperty) + 1;
-            _column = (int)_btn.GetValue(Grid.ColumnProperty) + 1;
+            _row = (int)_btn.GetValue(Grid.RowProperty);
+            _column = (int)_btn.GetValue(Grid.ColumnProperty);
+
+
 
             if (state)
             {
-                name = _btn.Name;
+                name = _btn.Name.ToString();
                 Fabrika(name, _column, _row);
             }
             else
             {
                 if (figures.Move(_column, _row))
                 {
-                    Grid.SetRow(white_Rook, _row - 1);
-                    Grid.SetColumn(white_Rook, _column - 1);
+                    _btn.Name = name;
+                    Grid.SetRow(take_element("Ic_" + name), _row);
+                    Grid.SetColumn(take_element("Ic_" + name), _column);
                 }
                 else
                 {
@@ -66,7 +82,7 @@ namespace Chess
 
         private void Fabrika(string _name, int x, int y)
         {
-            switch (_name.Replace("White_", ""))
+            switch (_name.Replace("White_", "").Remove(_name.Length - 2))
             {
                 case "King":
                     figures = new King(x, y);
