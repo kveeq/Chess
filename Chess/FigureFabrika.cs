@@ -7,59 +7,38 @@ using ChessLibrary;
 
 namespace Chess
 {
-    class FigureFabrika
-    {
-
-    }
-
     class PieceMaker
     {
-        static public ChessFigures Make(string pieceCode, int x, int y)
+        static public ChessFigures Make(string _name, int x, int y)
         {
-            ChessFigures piece = null;
-
-            switch (pieceCode)
+            ChessFigures figures = null;
+            switch (_name.Replace("White_", "").Remove(_name.Length - 2))
             {
                 case "King":
-                case "1":
-                case "K":
-                    piece = new King(x, y);
+                    figures = new King(x, y);
+                    //figures.Move();
                     break;
-
                 case "Queen":
-                case "2":
-                case "Q":
-                    piece = new Queen(x, y);
+                    figures = new Queen(x, y);
                     break;
-
                 case "Bishop":
-                case "3":
-                case "B":
-                    piece = new Bishop(x, y);
+                    figures = new Bishop(x, y);
                     break;
-
                 case "Knight":
-                case "4":
-                case "N":
-                    piece = new Knight(x, y);
+                    figures = new Knight(x, y);
                     break;
-
                 case "Rook":
-                case "5":
-                case "R":
-                    piece = new Rook(x, y);
+                    figures = new Rook(x, y);
+                    break;
+                case "Pawn":
+                    figures = new Pawn(x, y);
                     break;
 
-                case "Pawn":
-                case "6":
-                case "P":
-                    piece = new Pawn(x, y);
-                    break;
 
                 default: throw (new Exception("Unknown piece code."));
             }
 
-            return piece;
+            return figures;
         }
 
         static public ChessFigures Make(int pieceCode, int x, int y)

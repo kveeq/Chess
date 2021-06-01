@@ -1,12 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ChessLibrary
+namespace Chess3Console
 {
-    public class ChessFigures
+    class Program
+    {
+        static void Main()
+        {
+            bool state;
+            ChessFigures[] figures = new ChessFigures[5];
+
+            figures[0] = new King(4, 4);
+            figures[1] = new Queen(1, 1);
+            figures[2] = new Bishop(4, 4);
+            figures[3] = new Knight(1, 1);
+            figures[4] = new Rook(4, 4);
+
+            foreach (var figure in figures)
+            {
+                state = figure.Move(5, 5);
+                Console.WriteLine(state ? "YES" : "NO");
+            }
+        }
+    }
+
+    class ChessFigures
     {
         public int x1;
         public int y1;
@@ -23,7 +40,7 @@ namespace ChessLibrary
         }
     }
 
-    public class King : ChessFigures
+    class King : ChessFigures
     {
         public King(int x1, int y1) : base(x1, y1)
         {
@@ -43,7 +60,7 @@ namespace ChessLibrary
         }
     }
 
-    public class Queen : ChessFigures
+    class Queen : ChessFigures
     {
         public Queen(int x1, int y1) : base(x1, y1)
         {
@@ -64,7 +81,7 @@ namespace ChessLibrary
         }
     }
 
-    public class Bishop : ChessFigures
+    class Bishop : ChessFigures
     {
         public Bishop(int x1, int y1) : base(x1, y1)
         {
@@ -84,7 +101,7 @@ namespace ChessLibrary
         }
     }
 
-    public class Knight : ChessFigures
+    class Knight : ChessFigures
     {
         public Knight(int x1, int y1) : base(x1, y1)
         {
@@ -105,7 +122,7 @@ namespace ChessLibrary
         }
     }
 
-    public class Rook : ChessFigures
+    class Rook : ChessFigures
     {
         public Rook(int x1, int y1) : base(x1, y1)
         {
@@ -123,21 +140,5 @@ namespace ChessLibrary
             else
                 return false;
         }
-    }
-
-
-    public class Pawn : ChessFigures
-    {
-        public Pawn(int newX, int newY) : base(newX, newY)
-        {
-
-        }
-
-        public override bool Move(int newX, int newY)
-        {
-            return ((x1 == newX && y1 == 2 && y1 + 2 >= newY) ||
-                    (x1 == newX && y1 + 1 == newY));
-        }
-
     }
 }

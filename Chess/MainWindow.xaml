@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Chess"
         mc:Ignorable="d"
         Title="MainWindow" Height="817" Width="799" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Width="800" Height="800" x:Name="griddd" >
+    <Grid Width="800" Height="800" x:Name="Main_Grid" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="100*"/>
             <ColumnDefinition Width="100*"/>
